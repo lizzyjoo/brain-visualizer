@@ -1,26 +1,31 @@
 import React from "react";
 import { Scatter } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
+Chart.register(...registerables);
+
 import {
   Chart as ChartJS,
+  CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
+  Title,
   Tooltip,
   Legend,
-  Title,
 } from "chart.js";
+
 import { calculateRegressionLine } from "../utils/regressionUtils";
 
-// Register required Chart.js components
+// Register all components
 ChartJS.register(
+  CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
+  Title,
   Tooltip,
-  Legend,
-  Title
+  Legend
 );
-
 function ConnectivityPlot({ correlation }) {
   const ages = correlation.subjects.map((d) => d.age);
   const connectivities = correlation.subjects.map((d) => d.connectivity);
