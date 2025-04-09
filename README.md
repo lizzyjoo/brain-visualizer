@@ -2,6 +2,10 @@
 
 Interactive visualization tool for exploring brain connectivity data across different frequencies.
 
+## Live Demo
+
+https://dashing-speculoos-04b862.netlify.app/
+
 ## Features
 
 - Frequency selection with visual oscillation representation
